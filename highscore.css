@@ -1,0 +1,162 @@
+@font-face {
+    font-family: mangatb;
+    src: url(fonts/mangatb.ttf);
+}
+@font-face {
+    font-family: mangat;
+    src: url(fonts/mangat.ttf);
+}
+@font-face {
+    font-family: mangati;
+    src: url(fonts/mangati.ttf);
+}
+
+:root {
+    --primary-color: rgb(89, 163, 166);
+    --panda-color1: #d0eba4;
+    --panda-color: #9FE5CE;
+}
+
+body{
+    background-color: #242424;
+    margin: 0;
+    height: 100vh;
+ 
+}
+
+#container-header-outer{
+    width: 95vw;
+    max-width: 1200px;
+    height: 100%;
+}
+
+#container-header-outer{
+    width: 95vw;
+    max-width: 1200px;
+    height: 100%;
+}
+
+#container-header{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    height: 10vh;
+    width: 100%;
+    border-radius: .25rem;
+    align-self: top !important;
+    background-color: rgba(255, 255, 255, 0.137);
+    margin-top: 12px;
+    margin-bottom: 12px;
+    box-shadow: 4px 4px 10px #0a0a0a;
+}
+
+#logo {
+    padding-left: 1rem;
+    font-size: 23px;
+    align-self: center;
+    color: white;
+    text-shadow: 1px 1px 2px #0a0a0a;
+    font-family: mangatb;
+}
+
+#menu {
+    font-size: 33px;
+    align-self: center;
+    justify-self: right;
+    padding-right: 1rem;
+}
+
+i.fas.fa-paw{
+    color: var(--panda-color);
+    text-shadow: 1px 1px 2px #0a0a0a;
+    font-size: 33px !important;
+}
+
+.fas.fa-bars{
+    color: var(--panda-color1);
+    text-shadow: 1px 1px 2px #0a0a0a;
+}
+
+#container-body {
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    justify-items: center;
+    row-gap: 20px;
+}
+
+#heading {
+    font-size: 23px;
+    font-family: mangatb;
+    color: var(--panda-color);
+}
+
+#heading2 {
+    font-size: 23px;
+    font-family: mangatb;
+    color: var(--panda-color1);
+}
+
+#heading-container{
+    margin-top: 20px;
+}
+
+
+
+#highscoreTable-container {
+
+    width: 95vw;
+    height: fit-content;
+    border-radius: .25rem !important;
+    text-align: center;
+    /* background-color: white; */
+        box-shadow: 4px 4px 10px #0a0a0a;
+    background: linear-gradient(126deg, rgba(159,229,197,1) 0%, rgba(195,232,184,1) 50%, rgba(208,235,164,1) 100%);
+}
+
+#highscoreTable-container > div {
+    padding: 10px;
+}
+  
+.score-outer {
+    height: 5vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+   
+    align-items: center;
+    font-size: 22px;
+    border-bottom: none;
+    color: white;
+    column-gap: 10px;
+    box-shadow: 4px 4px 10px #707070;
+    background-color: white;
+    border-radius: .25rem;
+    font-family: mangati;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.score-outer:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.score-outer > .countBox {
+    justify-self: center;
+    font-size: 22px;
+    border-radius: .25rem;
+    color: rgb(95, 95, 95);
+    width: 90% !important;
+    text-align: center;
+    border: 1px solid white;
+
+}
+
+.score-outer > .score {
+    font-size: 22px;
+    color: rgb(100, 100, 100);
+    font-family: mangati !important;
+    justify-self: center;
+}
+
+.name {
+    color:rgb(100, 100, 100);
+    font-family: mangatb;
+}
