@@ -1,5 +1,19 @@
 import questions  from "./demoFragen.js"
 
+document.querySelector("#logo").addEventListener("click", handleClickLogo);
+
+function handleClickLogo() {
+    window.location="/index.html";
+}
+
+document.querySelector("#menu").addEventListener("click", loadMenu);
+
+
+function loadMenu(){
+    document.querySelector("#menu-container").classList.toggle("show");
+    document.querySelector("fas fa-bars").classList.remove("fa-bars").classList.add("fa-times")
+}
+
 let currentQuestion = 0;
 let randomQuestions = questions.sort(() => Math.random() - .5).slice(0, 10);
 
@@ -10,22 +24,6 @@ document.querySelectorAll(".answer").forEach( answerDiv => {
 });
 
 document.querySelector(".mask").addEventListener("click", loadQuestionImage);
-
-document.querySelector("#menu").addEventListener("click", loadMenu);
-
-let menuOpen = false;
-function loadMenu(){
-    if(menuOpen != true){
-        document.querySelector("#container-header").classList.add("open");
-        document.querySelector("#menu-container").style.visibility = "visible";
-        menuOpen=true;
-    }else{
-        document.querySelector("#container-header").classList.remove("open");
-        document.querySelector("#menu-container").style.visibility = "hidden";
-        menuOpen=false;
-    }
-   
-}
 
 function loadQuestionImage(){
     document.querySelector(".mask").classList.add("hidden");

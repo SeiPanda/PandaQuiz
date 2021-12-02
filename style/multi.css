@@ -1,0 +1,66 @@
+@font-face {
+    font-family: mangatb;
+    src: url(../fonts/mangatb.ttf);
+}
+@font-face {
+    font-family: mangat;
+    src: url(../fonts/mangat.ttf);
+}
+@font-face {
+    font-family: mangati;
+    src: url(../fonts/mangati.ttf);
+}
+@font-face {
+    font-family: animebld;
+    src: url(../fonts/animeace2_bld.ttf);
+}
+
+
+body{
+    height: 100vh;
+    margin: 0;
+  
+}
+
+#container{
+    position: relative;
+    font-family: animebld;
+    font-size: 23px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+    text-shadow: 1px 1px 2px #0a0a0a;
+    background-color: #404040;
+    z-index: 1;
+}
+
+.fa-snowplow{
+    padding-left: 7px;
+    font-size: 30px;
+    text-shadow: 1px 1px 2px #0a0a0a;
+}
+
+.fa-undo{
+    font-size: 23px;
+    padding-left: 7px;
+
+}
+
+#backButton{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    color: rgb(61, 61, 61);
+    top: 80%;
+    border-radius: .25rem;
+    box-shadow: 4px 4px 10px #292929;
+    border: none;
+    cursor: pointer;
+    transition: 150ms;
+    font-size: 23px;
+    font-family: animebld !important;
+
+    padding: 5px;
+}

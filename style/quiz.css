@@ -1,15 +1,26 @@
 @font-face {
     font-family: mangatb;
-    src: url(fonts/mangatb.ttf);
+    src: url(../fonts/mangatb.ttf);
 }
 @font-face {
     font-family: mangat;
-    src: url(fonts/mangat.ttf);
+    src: url(../fonts/mangat.ttf);
 }
 @font-face {
     font-family: mangati;
-    src: url(fonts/mangati.ttf);
+    src: url(../fonts/mangati.ttf);
 }
+
+@font-face {
+    font-family: animebld;
+    src: url(../fonts/animeace2_bld.ttf);
+}
+
+@font-face {
+    font-family: animeital;
+    src: url(../fonts/animeace2_ital.ttf);
+}
+
 :root {
     --primary-color: rgb(89, 163, 166);
     --panda-color1: #d0eba4;
@@ -32,6 +43,7 @@ body{
 
 #container-header{
     z-index: 3;
+    position: relative;
     display: grid;
     grid-template-columns: auto 1fr;
     height: 10vh;
@@ -46,15 +58,14 @@ body{
 
 #logo {
     padding-left: 1rem;
-    font-size: 23px;
+    font-size: 22px;
     align-self: center;
     color: white;
     text-shadow: 1px 1px 2px #0a0a0a;
-    font-family: mangatb;
+    font-family: animebld;
 }
 
 #menu {
-    font-size: 33px;
     align-self: center;
     justify-self: right;
     padding-right: 1rem;
@@ -63,12 +74,13 @@ body{
 i.fas.fa-paw{
     color: var(--panda-color);
     text-shadow: 1px 1px 2px #0a0a0a;
-    font-size: 33px !important;
+    font-size: 32px !important;
 }
 
 .fas.fa-bars{
     color: var(--panda-color1);
     text-shadow: 1px 1px 2px #0a0a0a;
+    font-size: 32px;
 }
 
 #container {
@@ -90,8 +102,8 @@ i.fas.fa-paw{
     display: flex;
     color: rgb(61, 61, 61);;
     height: 35vh;
-    font-size: 27px;
-    font-family: mangati;
+    font-size: 25px;
+    font-family: animeital;
     background: var(--gradient);
     margin-bottom: 20px;
     border-radius: .25rem;
@@ -137,7 +149,7 @@ i.fas.fa-paw{
     cursor: pointer;
     transition: 150ms;
     font-size: 20px;
-    font-family: mangati;
+    font-family: animeital;
     font-weight: bolder;
     align-items: center;
     text-align: center;
@@ -180,21 +192,20 @@ i.fas.fa-paw{
     text-shadow: 1px 1px 2px #0a0a0a;
 }
 
-.open {
-    box-shadow: none !important;
-    border-bottom-left-radius: 0 !important;
-    border-bottom-right-radius: 0 !important;
+#menu-container.show{
+    left: 0px;
 }
 
 #menu-container{
-    z-index: 2;
-    visibility: hidden;
+    z-index: 1 !important;
+    height: 100%;
     background-color: #404040;
     position: absolute;
-    width: 95vw;
-    box-shadow: 4px 10px 10px #0a0a0ad5;
+    width: 100vw;
     border-bottom-right-radius: .25rem;
     border-bottom-left-radius: .25rem;
+    transition: all 0.5s ease ;
+    left: -110%;
 }
 
 #menu-liste{

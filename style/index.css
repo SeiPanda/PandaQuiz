@@ -1,14 +1,18 @@
 @font-face {
     font-family: mangatb;
-    src: url(fonts/mangatb.ttf);
+    src: url(../fonts/mangatb.ttf);
 }
 @font-face {
     font-family: mangat;
-    src: url(fonts/mangat.ttf);
+    src: url(../fonts/mangat.ttf);
 }
 @font-face {
     font-family: mangati;
-    src: url(fonts/mangati.ttf);
+    src: url(../fonts/mangati.ttf);
+}
+@font-face {
+    font-family: animebld;
+    src: url(../fonts/animeace2_bld.ttf);
 }
 
 :root {
@@ -22,7 +26,6 @@ body{
     background-color: #242424;
     margin: 0;
     height: 100vh;
- 
 }
 
 #container-header-outer{
@@ -45,15 +48,14 @@ body{
 
 #logo {
     padding-left: 1rem;
-    font-size: 23px;
+    font-size: 22px;
     align-self: center;
     color: white;
     text-shadow: 1px 1px 2px #0a0a0a;
-    font-family: mangatb;
+    font-family: animebld;
 }
 
 #menu {
-    font-size: 33px;
     align-self: center;
     justify-self: right;
     padding-right: 1rem;
@@ -62,12 +64,13 @@ body{
 i.fas.fa-paw{
     color: var(--panda-color);
     text-shadow: 1px 1px 2px #0a0a0a;
-    font-size: 33px !important;
+    font-size: 32px !important;
 }
 
 .fas.fa-bars{
     color: var(--panda-color1);
     text-shadow: 1px 1px 2px #0a0a0a;
+    font-size: 32px !important;
 }
 
 #container-app {
@@ -118,7 +121,7 @@ img {
     cursor: pointer;
     transition: 150ms;
     font-size: 27px;
-    font-family: mangatb;
+    font-family: animebld !important;
     align-items: center;
 }
 
@@ -128,7 +131,11 @@ img {
 
 #start {
     background: var(--gradient);
-  
+}
+
+
+#highscore-span{
+    padding-left: 1rem;
 }
 
 #innerStart {
@@ -140,4 +147,11 @@ img {
     justify-content: center;
     align-items: center;
     padding: 3.5px;
+}
+
+.fas.fa-crown{
+    font-size: 24px !important;
+    color: rgb(223, 161, 4);
+  
+
 }
