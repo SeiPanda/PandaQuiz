@@ -197,6 +197,9 @@ i.fas.fa-paw{
 }
 
 #menu-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 1 !important;
     height: 100%;
     background-color: #404040;
@@ -210,4 +213,17 @@ i.fas.fa-paw{
 
 #menu-liste{
    list-style: none;
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 1fr 1fr 1fr 1fr;
+   padding-left: 0;
+   text-align: center;
+   gap: 15px;
 }
+
+.menu-item{
+    font-size: 20px;
+    font-family: animebld;
+}
+
+
