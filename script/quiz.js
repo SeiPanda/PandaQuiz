@@ -75,4 +75,20 @@ function showQuestion() {
     document.querySelector("#answer-4").innerText=randomAnswers[3].text;
 } 
 
+document.querySelectorAll(".item-container").forEach( menuItem => {
+    menuItem.addEventListener("click", handleClickMenuItem);
+});
 
+function handleClickMenuItem(e) {
+    const menuItemText = e.target.innerText;
+    console.log(menuItemText)
+    if(menuItemText === "Highscore"){
+        window.location="/highscore.html";
+    }
+    if(menuItemText === "Home"){
+        window.location="/index.html";
+    }
+    if(menuItemText === "Optionen"){
+        alert("Optionen")
+    }
+}
