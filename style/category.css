@@ -1,0 +1,90 @@
+@font-face {
+    font-family: mangatb;
+    src: url(../fonts/mangatb.ttf);
+}
+@font-face {
+    font-family: mangat;
+    src: url(../fonts/mangat.ttf);
+}
+@font-face {
+    font-family: mangati;
+    src: url(../fonts/mangati.ttf);
+}
+@font-face {
+    font-family: animebld;
+    src: url(../fonts/animeace2_bld.ttf);
+}
+
+body{
+    background-color: #404040;
+    margin: 0;
+}
+
+#container-app {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 95vw;
+    display: grid;
+    grid-template-rows: 0.1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#categoryHeading{
+    padding-top: 50px;
+    font-size: 30px;
+    font-family: animebld;
+    text-align: center;
+   
+}
+
+#container-menu{
+    display: grid;
+    height: 80%;
+    align-items: center;
+    grid-template-rows: 1fr 1fr 1fr 1fr; 
+    gap: 20px;
+    width: 95vw;
+}
+
+.menu-button{
+
+    color: rgb(61, 61, 61);
+    display: flex;
+    justify-content: center;
+    border-radius: .25rem;
+    box-shadow: 4px 4px 10px #0a0a0a;
+    height: 100%;
+    cursor: pointer;
+    transition: 150ms;
+    font-size: 27px;
+    font-family: animebld !important;
+    align-items: center;
+    width: 100%;
+}
+
+#start{
+    background-image: url("../img/sad-anime-1.jpg");
+
+    color: white;
+}
+
+#multi{
+    background-image: url("../img/thumb-350-947037.jpg");
+    color: black;
+   
+    
+}
+
+.menu-button:hover {
+    box-shadow: 4px 4px 10px rgb(37, 37, 37);
+}
+
+
+#highscore-span{
+    padding-left: 1rem;
+}
+

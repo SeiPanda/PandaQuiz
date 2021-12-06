@@ -12,22 +12,28 @@
 </head>
 <body>
     <div id="PopUpName">
-        <p>Current Score:<span></span></p>
-        <label>Enter Name:</label>
-        <input type="text"></inpu>
-        <button><i class="fas fa-check"></i></button>
+        <div id="inner">
+            <div id="popUpInner">
+                <p id="currentScore">Current Score:</p>
+                <div id="points"><span id="currentPoints"></span></div>
+                <label id="inputLabel">Enter Name:</label>
+                <input id="inputName" type="text" maxlength="11"></input>
+            </div>
+            <button id="submitButton"><i class="fas fa-check"></i></button>
+            <button id="closingButton"><i class="fas fa-times"></i></button>
+        </div>
     </div>
     <div id="container-body">
         <div id="container-header-outer">
             <div id="menu-container">
                 <p class="menu-p"><i class="fas fa-seedling"></i>Pandas essen Pandabrot</p>
                 <ul id="menu-liste">
-                        <div class="item-container">
-                            <li class="menu-item"><i class="icon fas fa-home"></i>Home</li>
-                        </div>
-                        <div class="item-container">
-                            <li class="menu-item"><i class="icon fas fa-cog"></i>Optionen</li>
-                        </div>
+                    <div class="item-container">
+                        <li class="menu-item"><i class="icon fas fa-home"></i>Home</li>
+                    </div>
+                    <div class="item-container">
+                        <li class="menu-item"><i class="icon fas fa-cog"></i>Optionen</li>
+                    </div>
                 </ul>
             </div>
             <div id="container-header">
@@ -38,27 +44,6 @@
         <div id="heading-container"><span iD="heading">HIGHSCORE</span><span id="heading2"> RANKING</span></div>
         <div id="highscoreTable-container">
             <div id="table-container"> 
-                <div class="score-outer">
-                    <div class="countBox">
-                        <span class="count">1.</span>
-                    </div>
-                    <span class="name">Panda</span>
-                    <span class="score">100</span>
-                </div>
-                <div class="score-outer">
-                    <div class="countBox">
-                        <span class="count">2.</span>
-                    </div>
-                    <span class="name">Marc</span>
-                    <span class="score">99</span>
-                </div>
-                <div class="score-outer">
-                    <div class="countBox">
-                        <span class="count">3.</span>
-                    </div>
-                    <span class="name">Tiger</span>
-                    <span class="score">1</span>
-                </div>
             </div>
         </div>
     </div>

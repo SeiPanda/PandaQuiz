@@ -75,11 +75,7 @@ i.fas.fa-paw{
     font-size: 32px !important;
 }
 
-#container-app {
-    margin: 0 auto;
-    max-width: 1200px;
-    width: 95vw;
-}
+
 
 #container-body {
     height: 100%;
@@ -87,6 +83,12 @@ i.fas.fa-paw{
     grid-template-rows: 1fr auto 0.4fr;
     justify-items: center;
     align-items: center;
+}
+
+#container-app {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 95vw;
 }
 
 #app-foto {

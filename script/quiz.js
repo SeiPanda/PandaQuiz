@@ -1,5 +1,6 @@
 import questions  from "./demoFragen.js";
 
+
 let maxAnzahlQuestions = 10;
 
 document.querySelector("#logo").addEventListener("click", handleClickLogo);

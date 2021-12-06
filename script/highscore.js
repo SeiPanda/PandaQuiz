@@ -1,3 +1,28 @@
+loadPoints();
+
+let highscores = [];
+let lsScores = localStorage.getItem("playerScores");
+if(lsScores) {
+    highscores = JSON.parse(lsScores);
+} 
+
+
+
+function loadPoints () {
+    let currentPoints = localStorage.getItem("score");
+    document.querySelector("#currentPoints").innerText = currentPoints
+}
+
+loadHighscoreListe();
+
+function loadHighscoreListe(){
+    document.querySelector("#table-container").innerHTML = "";
+    highscores.sort((a,b) => { return b.score - a.score; });
+    highscores.forEach( (player, index) => {
+        document.querySelector("#table-container").innerHTML += "<div class='score-outer'><div class='countBox'><span class='count'>"  + (index+1) + "</span></div><span class='name'>" + player.name + "</span><span class='score'>" + player.score + "</span></div>";
+    });
+}
+
 document.querySelector("#logo").addEventListener("click", handleClickLogo);
 
 function handleClickLogo() {
@@ -35,4 +60,30 @@ function handleClickMenuItem(e) {
     if(menuItemText === "Home"){
         window.location="/index.html";
     }
+}
+
+document.querySelector("#submitButton").addEventListener("click", submitName);
+
+function submitName(){
+
+    let currentName = document.querySelector("#inputName").value
+    console.log(currentName)
+    localStorage.setItem("playerName", currentName)
+    document.querySelector("#inputName").value ="";
+    document.querySelector("#PopUpName").style.visibility ="hidden";
+
+    let entry = {
+        name: currentName,
+        score: localStorage.getItem("score")
+    }
+    
+    highscores.push(entry);
+    loadHighscoreListe();
+    localStorage.setItem("playerScores", JSON.stringify(highscores));
+}
+
+document.querySelector("#closingButton").addEventListener("click", closePopup);
+
+function closePopup() {
+    document.querySelector("#PopUpName").style.visibility ="hidden";
 }
