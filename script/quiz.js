@@ -1,4 +1,6 @@
-import questions  from "./demoFragen.js"
+import questions  from "./demoFragen.js";
+
+let maxAnzahlQuestions = 10;
 
 document.querySelector("#logo").addEventListener("click", handleClickLogo);
 
@@ -25,7 +27,7 @@ function loadMenu(){
 }
 
 let currentQuestion = 0;
-let randomQuestions = questions.sort(() => Math.random() - .5).slice(0, 10);
+let randomQuestions = questions.sort(() => Math.random() - .5).slice(0, maxAnzahlQuestions);
 
 showQuestion();
 
@@ -47,6 +49,7 @@ function handleClickAnswer(e){
     const correctAnswer = randomQuestions[currentQuestion].answers.find(answer => answer.correct == true);
    
     if(answerText === correctAnswer.text){
+        localStorage.setItem("score", Number(localStorage.getItem("score"))+5);
         e.target.classList.add("correct");
     }else{
         e.target.classList.add("false");
@@ -65,6 +68,9 @@ function showCorrectAnswer(){
 }
 
 function showQuestion() {
+    if(maxAnzahlQuestions === currentQuestion)
+        window.location = "/highscore.html";
+
     document.querySelectorAll(".answer").forEach( answer => answer.classList.remove("correct", "false"))
     let question = randomQuestions[currentQuestion];
     document.querySelector("#question-text").innerText=question.question;

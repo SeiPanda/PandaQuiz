@@ -1,6 +1,7 @@
 document.querySelector("#start").addEventListener("click", handleClickStart);
 
 function handleClickStart() {
+    localStorage.setItem("score", Number(0));
     window.location="/quiz.html";
 }
 
