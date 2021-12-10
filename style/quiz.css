@@ -36,7 +36,7 @@ body{
 
 #container-header-outer{
     width: 95vw;
-    max-width: 1200px;
+    max-width: 600px;
     height: 100%;
    
 }
@@ -46,7 +46,7 @@ body{
     position: relative;
     display: grid;
     grid-template-columns: auto 1fr;
-    height: 10vh;
+    height: 81px;
     width: 100%;
     border-radius: .25rem;
     align-self: top !important;
@@ -86,7 +86,7 @@ i.fas.fa-paw{
 
 #container {
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 600px;
     width: 95vw;
     position: relative;
 }
@@ -170,7 +170,7 @@ i.fas.fa-paw{
 }
 
 #container-progressBar{
-    max-width: 1200px;
+    max-width: 600px;
     width: 95vw;
 }
 

@@ -53,6 +53,7 @@ body{
 }
 
 #inner{
+    max-width: 400px;
     height: fit-content;
     width: 90vw;
     position: absolute;
@@ -149,16 +150,9 @@ body{
 }
 
 
-
 #container-header-outer{
     width: 95vw;
-    max-width: 1200px;
-    height: 100%;
-}
-
-#container-header-outer{
-    width: 95vw;
-    max-width: 1200px;
+    max-width: 600px;
     height: 100%;
 }
 
@@ -167,7 +161,7 @@ body{
     position: relative;
     display: grid;
     grid-template-columns: auto 1fr;
-    height: 10vh;
+    height: 81px;
     width: 100%;
     border-radius: .25rem;
     align-self: top !important;
@@ -230,7 +224,7 @@ i.fas.fa-paw{
 
 
 #highscoreTable-container {
-    max-width: 1200px;
+    max-width: 600px;
     width: 95vw;
     height: fit-content;
     border-radius: .25rem !important;
@@ -285,3 +279,37 @@ i.fas.fa-paw{
     color:rgb(100, 100, 100);
     font-family: animebld;
 }
+
+@media screen and (max-width: 362px) {
+    #logo {
+        font-size: 18px;
+    }
+    
+    i.fas.fa-paw{
+        font-size: 28px !important;
+    }
+    
+    .fas.fa-bars{
+        font-size: 28px;
+    }
+    
+    .fas.fa-times{
+        font-size: 28px;
+    }
+
+    .icon{
+        font-size: 20px;
+    }
+
+    .menu-item{
+        font-size: 16px;
+    }
+
+    .menu-p{
+        font-size: 16px;
+    }
+
+    .fa-seedling{
+        font-size: 18px !important;
+    }
+  }

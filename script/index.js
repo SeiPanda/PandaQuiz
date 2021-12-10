@@ -35,7 +35,7 @@ function loadMenu(){
         menuOpen=false;
     }else{
         document.querySelector(".headerbar").classList.remove("fa-cog");
-        document.querySelector(".headerbar").classList.add("fa-times")
+        document.querySelector(".headerbar").classList.add("fa-times");
         menuOpen=true;
     }
 }
