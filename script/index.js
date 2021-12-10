@@ -1,11 +1,10 @@
 document.querySelector("#start").addEventListener("click", handleClickStart);
 
 function handleClickStart() {
-    localStorage.setItem("score", Number(0));
-    window.location="/quiz.html";
+    window.location="/category.html";
 }
 
-document.querySelector("#logo").addEventListener("click", handleClickLogo);
+document.querySelector(".headerlogo").addEventListener("click", handleClickLogo);
 
 function handleClickLogo() {
     window.location="/index.html";
@@ -31,12 +30,11 @@ function loadMenu(){
     document.querySelector("#menu-container").classList.toggle("show");
     if(menuOpen === true){   
   
-        document.querySelector(".headerbar").classList.add("fa-bars");
+        document.querySelector(".headerbar").classList.add("fa-cog");
         document.querySelector(".headerbar").classList.remove("fa-times")
         menuOpen=false;
     }else{
-        
-        document.querySelector(".headerbar").classList.remove("fa-bars");
+        document.querySelector(".headerbar").classList.remove("fa-cog");
         document.querySelector(".headerbar").classList.add("fa-times")
         menuOpen=true;
     }

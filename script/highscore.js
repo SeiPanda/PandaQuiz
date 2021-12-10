@@ -6,11 +6,18 @@ if(lsScores) {
     highscores = JSON.parse(lsScores);
 } 
 
+console.log();
+
+let referrerFile = document.referrer.split("/")[document.referrer.split("/").length-1];
+if(referrerFile === "quiz.html") {
+    document.querySelector("#PopUpName").style.display = "flex";
+}
+
 
 
 function loadPoints () {
     let currentPoints = localStorage.getItem("score");
-    document.querySelector("#currentPoints").innerText = currentPoints
+    document.querySelector("#currentPoints").innerText = currentPoints;
 }
 
 loadHighscoreListe();
@@ -23,7 +30,7 @@ function loadHighscoreListe(){
     });
 }
 
-document.querySelector("#logo").addEventListener("click", handleClickLogo);
+document.querySelector(".headerlogo").addEventListener("click", handleClickLogo);
 
 function handleClickLogo() {
     window.location="/index.html";
@@ -67,8 +74,13 @@ document.querySelector("#submitButton").addEventListener("click", submitName);
 function submitName(){
 
     let currentName = document.querySelector("#inputName").value
+    if(currentName === ""){
+        alert("enter Name")
+        return
+    }
     console.log(currentName)
     localStorage.setItem("playerName", currentName)
+
     document.querySelector("#inputName").value ="";
     document.querySelector("#PopUpName").style.visibility ="hidden";
 

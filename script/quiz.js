@@ -1,9 +1,20 @@
-import questions  from "./demoFragen.js";
+let sessionCategory = sessionStorage.getItem("choosenCategory");
 
+let questionBlock;
+
+import("./demoFragen.js").then(fileData => {
+    if(sessionCategory === "Anime"){
+        questionBlock = fileData.questions;
+    }
+    if(sessionCategory === "Marvel"){
+        questionBlock = fileData.marvelQuestions;
+    }
+    runOnStart();
+});
 
 let maxAnzahlQuestions = 10;
 
-document.querySelector("#logo").addEventListener("click", handleClickLogo);
+document.querySelector(".headerlogo").addEventListener("click", handleClickLogo);
 
 function handleClickLogo() {
     window.location="/index.html";
@@ -28,9 +39,13 @@ function loadMenu(){
 }
 
 let currentQuestion = 0;
-let randomQuestions = questions.sort(() => Math.random() - .5).slice(0, maxAnzahlQuestions);
+let randomQuestions;
 
-showQuestion();
+function runOnStart() {
+    randomQuestions = questionBlock.sort(() => Math.random() - .5).slice(0, maxAnzahlQuestions);
+    showQuestion();
+}
+
 
 document.querySelectorAll(".answer").forEach( answerDiv => {
     answerDiv.addEventListener("click", handleClickAnswer);
@@ -69,7 +84,7 @@ function showCorrectAnswer(){
 }
 
 function showQuestion() {
-    if(maxAnzahlQuestions === currentQuestion)
+    if(maxAnzahlQuestions === currentQuestion) 
         window.location = "/highscore.html";
 
     document.querySelectorAll(".answer").forEach( answer => answer.classList.remove("correct", "false"))

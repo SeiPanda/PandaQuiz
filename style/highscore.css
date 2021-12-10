@@ -32,6 +32,9 @@ body{
     height: 100vh;
 }
 
+.closeTimes.fa-times{
+    color: white;
+}
 
 #PopUpName{
     position: fixed;
@@ -46,6 +49,7 @@ body{
     align-items: center;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.795);
+    display: none;
 }
 
 #inner{

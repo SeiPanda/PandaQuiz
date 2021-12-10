@@ -69,7 +69,7 @@ i.fas.fa-paw{
     font-size: 32px !important;
 }
 
-.fas.fa-bars{
+.headerbar.fas.fa-cog{
     color: var(--panda-color1);
     text-shadow: 1px 1px 2px #0a0a0a;
     font-size: 32px !important;

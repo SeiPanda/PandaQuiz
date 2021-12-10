@@ -311,7 +311,6 @@ const questions = [
 
 ];
 
-
 const marvelQuestions = [
     {
         question: "What is the name of Thor’s hammer?",
@@ -339,26 +338,26 @@ const marvelQuestions = [
         question: "What is Captain America’s shield made of?",
         answers: [
             {
-                text: "Vibranium",
+                text: "Vibran-ium",
                 correct: true,
             },
             {
-                text: "Adamantium",
+                text: "Adaman-tium",
                 correct: false,
             },
             {
-                text: "Promethium",
+                text: "Prome-thium",
                 correct: false,
             },
             {
-                text: "Carbonadium",
+                text: "Carbon-nium",
                 correct: false,
             }
         ]
 
     },
     {
-        question: "What is the alien race Loki sends to invade Earth in The Avengers?",
+        question: "What is the alien race Loki sends to Earth called?",
         answers: [
             {
                 text: "Chitauri",
@@ -402,22 +401,22 @@ const marvelQuestions = [
 
     },
     {
-        question: "What are the names of the Infinity Stones?",
+        question: "What is not a Infinity Stones?",
         answers: [
             {
-                text: "Space, Mind, Soul, Reality, Time, Power",
+                text: "Strength",
                 correct: true,
             },
             {
-                text: "Space, Speed, Death, Time, Strength",
+                text: "Time",
                 correct: false,
             },
             {
-                text: "Space, Soul, Teleportation, Spirit, Power, Time",
+                text: "Reality",
                 correct: false,
             },
             {
-                text: "Space, Reality, Strength,  Mind, Spell, Power",
+                text: "Mind",
                 correct: false,
             }
         ]
@@ -431,7 +430,7 @@ const marvelQuestions = [
                 correct: true,
             },
             {
-                text: "J.J.Osborn",
+                text: "J. J. Osborn",
                 correct: false,
             },
             {
@@ -533,10 +532,229 @@ const marvelQuestions = [
         ]
 
     },
+    {
+        question: "to which woman was Peter married for more than 10 years?",
+        answers: [
+            {
+                text: "Mary Jane Watson",
+                correct: true,
+            },
+            {
+                text: "Betty Brant",
+                correct: false,
+            },
+            {
+                text: "Felica Hardy",
+                correct: false,
+            },
+            {
+                text: "Kate Chushing",
+                correct: false,
+            }
+        ]
 
+    },
+    {
+        question: "What high school did Flash and Peter attend?",
+        answers: [
+            {
+                text: "Midtown High",
+                correct: true,
+            },
+            {
+                text: "Empire High",
+                correct: false,
+            },
+            {
+                text: "Baxter High",
+                correct: false,
+            },
+            {
+                text: "Tech High",
+                correct: false,
+            }
+        ]
+
+    },
+    {
+        question: "Peters college girlfriend was killed during a battle with the Green Goblin. Who was she?",
+        answers: [
+            {
+                text: "Gwen Stacy",
+                correct: true,
+            },
+            {
+                text: "Mary Jane Watson",
+                correct: false,
+            },
+            {
+                text: "Betty Brant",
+                correct: false,
+            },
+            {
+                text: "Felica Hardy",
+                correct: false,
+            }
+        ]
+
+    },
+    {
+        question: "one of Spider-Man's deadliest enemies was the father of his best friend. Who was this villain?",
+        answers: [
+            {
+                text: "Green Goblin",
+                correct: true,
+            },
+            {
+                text: "Sandman",
+                correct: false,
+            },
+            {
+                text: "Beetle",
+                correct: false,
+            },
+            {
+                text: "Scorpion",
+                correct: false,
+            }
+        ]
+
+    },
+    {
+        question: "Black Cat was an enemy, a love interest, and an ally of Spider-Man, who was she?",
+        answers: [
+            {
+                text: "Felicia Hardy",
+                correct: true,
+            },
+            {
+                text: "Selina Kyle",
+                correct: false,
+            },
+            {
+                text: "Betty Brant",
+                correct: false,
+            },
+            {
+                text: "Susan Storm",
+                correct: false,
+            }
+        ]
+
+    },
+    {
+        question: "what equipent can Starlord only because his race use?",
+        answers: [
+            {
+                text: "Element Gun",
+                correct: true,
+            },
+            {
+                text: "Space Helmet",
+                correct: false,
+            },
+            {
+                text: "Jet Bots",
+                correct: false,
+            },
+            {
+                text: "Power Gloves",
+                correct: false,
+            }
+        ]
+
+    },
+    {
+        question: "to which race belong Starlord (Comic)?",
+        answers: [
+            {
+                text: "Spartoi Hybrid",
+                correct: true,
+            },
+            {
+                text: "Eternal Hybrid",
+                correct: false,
+            },
+            {
+                text: "Celestial Hybrid",
+                correct: false,
+            },
+            {
+                text: "Kree Hybrid",
+                correct: false,
+            }
+        ]
+
+    },
+    {
+        question: "which nickname of Starlord is false?",
+        answers: [
+            {
+                text: "Leader of the Freaks",
+                correct: true,
+            },
+            {
+                text: "Lord of Stars",
+                correct: false,
+            },
+            {
+                text: "Princ of Spartax",
+                correct: false,
+            },
+            {
+                text: "Space Boy",
+                correct: false,
+            }
+        ]
+
+    },
 ]
 
+const entertainmentQuestions = [
+    {
+        question: "how many films does the mcu infinity saga include?",
+        answers: [
+            {
+                text: "22",
+                correct: true,
+            },
+            {
+                text: "19",
+                correct: false,
+            },
+            {
+                text: "15",
+                correct: false,
+            },
+            {
+                text: "8",
+                correct: false,
+            }
+        ]
 
+    },
+    {
+        question: "how many films does the mcu infinity saga include?",
+        answers: [
+            {
+                text: "22",
+                correct: true,
+            },
+            {
+                text: "19",
+                correct: false,
+            },
+            {
+                text: "15",
+                correct: false,
+            },
+            {
+                text: "8",
+                correct: false,
+            }
+        ]
 
+    },
+]
 
-export default questions;
+export {questions, marvelQuestions};

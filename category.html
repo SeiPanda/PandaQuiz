@@ -5,15 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/category.css">
+    <link rel="stylesheet" href="fonts/font_awesome/css/all.min.css" />
+    <link rel="stylesheet" href="./style/main.css">
+    <script src="./script/categorys.js" defer></script>
     <title>Document</title>
 </head>
 <body>
-    <div id="container-app">
-        <div id="categoryHeading">Categorys</div>
-        <div id="container-menu"> 
-            <div id="start" class="menu-button"><div id="innerStart"><span>Anime</span></div></div>
-            <div id="multi" class="menu-button"><span>Marvel</span></div>
-            
+    <div id="container-body">
+        <div id="container-header-outer">
+            <div id="menu-container">
+                <p class="menu-p"><i class="fas fa-seedling"></i>Pandas essen Pandabrot</p>
+                <ul id="menu-liste">
+                        <div class="item-container">
+                            <li class="menu-item"><i class="icon fas fa-home"></i>Home</li>
+                        </div>
+                        <div class="item-container">
+                            <li class="menu-item"><i class="icon fas fa-crown"></i>Highscore</li>
+                        </div>
+                        <div class="item-container">
+                            <li class="menu-item"><i class="icon fas fa-cog"></i>Optionen</li>
+                        </div>
+                </ul>
+            </div>
+            <div id="container-header">
+                <div id="logo"><i class="headerlogo fas fa-paw"></i><span> PandasQuizzz!</span></div>
+                <div id="menu"><i class="headerbar fas fa-bars"></i></div>
+            </div>
+        </div>
+        <div id="container-app">
+            <div id="container-menu"> 
+                <div id="anime" class="menu-button"><div id="innerStart"><span>Anime</span></div></div>
+                <div id="marvel" class="menu-button"><span>Marvel</span></div>
+                <div id="entertainment" class="menu-button"><span>Entertainment</span></div>
+                <div id="pandaFav" class="menu-button"><span>Pandas Favorits</span></div>
+            </div>
         </div>
     </div>
 </body>
