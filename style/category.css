@@ -160,6 +160,14 @@ i.fas.fa-paw{
     background-image: url("../img/1144293.jpeg");
 }
 
+#animal{
+    color: white;
+    text-shadow: 1px 1px 2px #0a0a0a;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../img/1144293.jpeg");
+}
+
 .menu-button:hover {
     box-shadow: 4px 4px 10px rgb(37, 37, 37);
 }

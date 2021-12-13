@@ -2,18 +2,16 @@ loadPoints();
 
 let highscores = [];
 let lsScores = localStorage.getItem("playerScores");
+
+
 if(lsScores) {
     highscores = JSON.parse(lsScores);
 } 
-
-console.log();
 
 let referrerFile = document.referrer.split("/")[document.referrer.split("/").length-1];
 if(referrerFile === "quiz.html") {
     document.querySelector("#PopUpName").style.display = "flex";
 }
-
-
 
 function loadPoints () {
     let currentPoints = localStorage.getItem("score");
@@ -99,3 +97,4 @@ document.querySelector("#closingButton").addEventListener("click", closePopup);
 function closePopup() {
     document.querySelector("#PopUpName").style.visibility ="hidden";
 }
+

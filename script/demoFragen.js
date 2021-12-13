@@ -712,22 +712,22 @@ const marvelQuestions = [
 
 const entertainmentQuestions = [
     {
-        question: "how many films does the mcu infinity saga include?",
+        question: "how many ratchet and clank games exists?",
         answers: [
             {
-                text: "22",
+                text: "15",
                 correct: true,
             },
             {
-                text: "19",
+                text: "3",
                 correct: false,
             },
             {
-                text: "15",
+                text: "7",
                 correct: false,
             },
             {
-                text: "8",
+                text: "10",
                 correct: false,
             }
         ]

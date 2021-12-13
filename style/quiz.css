@@ -195,3 +195,36 @@ i.fas.fa-paw{
     box-shadow: 4px 4px 10px #0a0a0a;
 }
 
+@media screen and (max-width: 362px) {
+    #logo {
+        font-size: 18px;
+    }
+    
+    i.fas.fa-paw{
+        font-size: 28px !important;
+    }
+    
+    .fas.fa-bars{
+        font-size: 28px;
+    }
+    
+    .fas.fa-times{
+        font-size: 28px;
+    }
+
+    .icon{
+        font-size: 20px;
+    }
+
+    .menu-item{
+        font-size: 16px;
+    }
+
+    .menu-p{
+        font-size: 16px;
+    }
+
+    .fa-seedling{
+        font-size: 18px !important;
+    }
+  }
