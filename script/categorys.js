@@ -1,3 +1,4 @@
+let categories = [];
 
 document.querySelector(".headerlogo").addEventListener("click", handleClickLogo);
 
@@ -51,3 +52,9 @@ function handleClickMenuItem(e){
     window.location="/quiz.html";
 }
 
+
+
+/*document.querySelectorAll(".menu-button").forEach(button => {
+    categories.push(button.innerText);
+    localStorage.setItem("categories", categories);
+});*/ 
