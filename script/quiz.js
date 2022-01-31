@@ -1,6 +1,9 @@
 let sessionCategory = sessionStorage.getItem("choosenCategory");
 
+let questionTime = 10;
+
 let questionBlock;
+let timerInterval;
 
 import("./demoFragen.js").then(fileData => {
     if(sessionCategory === "Anime"){
@@ -60,6 +63,8 @@ function loadQuestionImage(){
 }
 
 function handleClickAnswer(e){
+
+    clearInterval( timerInterval );
    
     const answerText = e.target.innerText;
     const correctAnswer = randomQuestions[currentQuestion].answers.find(answer => answer.correct == true);
@@ -95,6 +100,7 @@ function showQuestion() {
     document.querySelector("#answer-2").innerText=randomAnswers[1].text;
     document.querySelector("#answer-3").innerText=randomAnswers[2].text;
     document.querySelector("#answer-4").innerText=randomAnswers[3].text;
+    runTimer();
 } 
 
 document.querySelectorAll(".item-container").forEach( menuItem => {
@@ -113,4 +119,18 @@ function handleClickMenuItem(e) {
     if(menuItemText === "Optionen"){
         alert("Optionen")
     }
+}
+
+function runTimer() {
+  
+    let timeLeft = questionTime * 100;
+    timerInterval = setInterval(() => {
+        timeLeft--;
+        document.querySelector("#progressBar").style.width = (100 - (timeLeft / 10)) + "%";
+        if(timeLeft === 0){
+            clearInterval( timerInterval );
+            showCorrectAnswer();
+            document.querySelector(".mask").classList.remove("hidden")
+        }
+    }, 10);
 }

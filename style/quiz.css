@@ -154,7 +154,7 @@ i.fas.fa-paw{
     font-weight: bolder;
     align-items: center;
     text-align: center;
-    padding: 5px;
+   
 }
 
 .mask{
@@ -172,15 +172,21 @@ i.fas.fa-paw{
 #container-progressBar{
     max-width: 600px;
     width: 95vw;
+    background: var(--gradient);
+    box-shadow: 4px 4px 10px #0a0a0a;
+    border: 2px solid rgb(88, 88, 88);
+    border-radius: .25rem;
 }
 
 #progressBar {
-    border: 2px solid silver;
-    border-radius: .25rem;
     height: 27px;
-    background: var(--gradient);
-    box-shadow: 4px 4px 10px #0a0a0a;
+    background: #242424;
+    float: right;
+    border-radius: .1rem;
+  
+    
 }
+
 
 .correct {
     background-color: yellowgreen;
