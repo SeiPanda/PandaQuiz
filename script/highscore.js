@@ -1,14 +1,12 @@
 loadPoints();
+loadHighscoreListe();
 
 let highscores = [];
 let lsScores = localStorage.getItem("playerScores");
 
-let lsCate = localStorage.getItem("categories");
-
-
 if(lsScores) {
     highscores = JSON.parse(lsScores);
-} 
+}
 
 let referrerFile = document.referrer.split("/")[document.referrer.split("/").length-1];
 if(referrerFile === "quiz.html") {
@@ -20,13 +18,15 @@ function loadPoints () {
     document.querySelector("#currentPoints").innerText = currentPoints;
 }
 
-loadHighscoreListe();
-
 function loadHighscoreListe(){
     
     document.querySelector("#table-container").innerHTML = "";
 
-    let playerScores = JSON.parse(localStorage.getItem("playerScores"));
+    let storageScores = localStorage.getItem("playerScores")
+    let playerScores = [];
+    if(storageScores)
+        playerScores = JSON.parse(storageScores);
+
 
     //load all highscores
     let allHighscores = [];
@@ -44,6 +44,7 @@ function loadHighscoreListe(){
     div += "</div></div></div>";
     document.querySelector("#table-container").innerHTML += div;
     div = "";
+
 
     playerScores.forEach( category => {
         let div = '<div id="eachCategoryTable"><div id="heading-container"><span iD="heading">' + category.category + '</span><span>&nbsp;&nbsp;&nbsp;</span><span id="heading2">RANKING</span></div><div id="highscoreTable-container"><div id="table-container">';
