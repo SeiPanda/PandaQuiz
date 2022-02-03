@@ -181,8 +181,12 @@
     padding: 10px;
 }
 
-#eachCategoryTable:last-child{
+#eachCategoryTable{
     margin-bottom: 40px;
+}
+
+.currentClosed {
+    display: none !important;
 }
   
 .score-outer {

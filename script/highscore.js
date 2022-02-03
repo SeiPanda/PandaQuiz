@@ -1,6 +1,7 @@
 loadPoints();
 loadHighscoreListe();
 
+let open = false
 let highscores = [];
 let lsScores = localStorage.getItem("playerScores");
 
@@ -144,5 +145,22 @@ document.querySelector("#closingButton").addEventListener("click", closePopup);
 
 function closePopup() {
     document.querySelector("#PopUpName").style.visibility ="hidden";
+}
+
+
+
+document.querySelectorAll("#eachCategoryTable").forEach( cateTable => {
+    cateTable.addEventListener("click", handleClickTable);
+});
+
+function handleClickTable() {
+    console.log(open)
+    if(open === false) {
+        document.querySelector(".score-outer").classList.add("currentClosed");
+        open = true;
+    }else{
+        document.querySelector(".score-outer").classList.remove("currentClosed");
+        open = false;
+    }
 }
 
