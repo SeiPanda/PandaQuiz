@@ -1,17 +1,25 @@
-let sessionCategory = sessionStorage.getItem("choosenCategory");
+var sessionCategory = sessionStorage.getItem("choosenCategory");
+if(sessionCategory == null) {
+    window.location = "/";
+}
 
-let questionTime = 10;
+var questionTime = 10;
 
-let questionBlock;
-let timerInterval;
+var questionBlock = [];
+var timerInterval;
 
 import("./demoFragen.js").then(fileData => {
+
     if(sessionCategory === "Anime"){
+        console.log("anime");
         questionBlock = fileData.questions;
     }
     if(sessionCategory === "Marvel"){
+        console.log("marvel");
         questionBlock = fileData.marvelQuestions;
     }
+    console.log(fileData.questions);
+    console.log(questionBlock);
     runOnStart();
 });
 
@@ -126,7 +134,7 @@ function runTimer() {
     let timeLeft = questionTime * 100;
     timerInterval = setInterval(() => {
         timeLeft--;
-        document.querySelector("#progressBar").style.width = (100 - (timeLeft / 10)) + "%";
+        document.querySelector("#progressBar").style.width = (100 - (timeLeft / questionTime)) + "%";
         if(timeLeft === 0){
             clearInterval( timerInterval );
             showCorrectAnswer();

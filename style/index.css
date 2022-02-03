@@ -70,13 +70,13 @@ body{
 i.fas.fa-paw{
     color: var(--panda-color);
     text-shadow: 1px 1px 2px #0a0a0a;
-    font-size: 32px !important;
+    font-size: 32px ;
 }
 
 .headerbar.fas.fa-cog{
     color: var(--panda-color1);
     text-shadow: 1px 1px 2px #0a0a0a;
-    font-size: 32px !important;
+    font-size: 32px ;
 }
 
 
@@ -162,36 +162,3 @@ img {
     padding: 3.5px;
 }
 
-@media screen and (max-width: 362px) {
-    #logo {
-        font-size: 18px;
-    }
-    
-    i.fas.fa-paw{
-        font-size: 28px !important;
-    }
-    
-    .fas.fa-bars{
-        font-size: 28px;
-    }
-    
-    .fas.fa-times{
-        font-size: 28px;
-    }
-
-    .icon{
-        font-size: 20px;
-    }
-
-    .menu-item{
-        font-size: 16px;
-    }
-
-    .menu-p{
-        font-size: 16px;
-    }
-
-    .fa-seedling{
-        font-size: 18px !important;
-    }
-  }

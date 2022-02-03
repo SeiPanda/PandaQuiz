@@ -114,9 +114,51 @@
     
 }
 
-@media screen and (max-width: 362px) {
+@media screen and (max-width: 365px) {
     #logo {
-        font-size: 18px;
+        font-size: 18px !important;
+    }
+    
+    i.fas.fa-paw{
+        font-size: 28px !important;
+    }
+    
+    .headerbar.fas.fa-cog{
+        font-size: 28px !important;
+    }
+    
+    .fas.fa-times{
+        font-size: 28px !important;
+    }
+
+    .fas.fa-bars{
+        font-size: 28px !important;
+    }
+
+    .icon{
+        font-size: 20px !important;
+    }
+
+    .menu-item{
+        font-size: 16px !important;
+    }
+
+    .menu-p{
+        font-size: 16px !important;
+    }
+
+    .fa-seedling{
+        font-size: 18px !important;
+    }
+  }
+
+  @media screen and (max-width: 312px) {
+    #logo {
+        font-size: 16px !important;
+    }
+
+    .headerbar.fas.fa-cog{
+        font-size: 28px !important;
     }
     
     i.fas.fa-paw{
@@ -124,23 +166,23 @@
     }
     
     .fas.fa-bars{
-        font-size: 28px;
+        font-size: 28px !important;
     }
     
     .fas.fa-times{
-        font-size: 28px;
+        font-size: 28px !important;
     }
 
     .icon{
-        font-size: 20px;
+        font-size: 20px !important;
     }
 
     .menu-item{
-        font-size: 16px;
+        font-size: 16px !important;
     }
 
     .menu-p{
-        font-size: 16px;
+        font-size: 16px !important;
     }
 
     .fa-seedling{

@@ -1,7 +1,7 @@
 
 const questions = [
     {
-        question: "Who is the main charakter von SAO?",
+        question: "Who is the main charakter of SAO?",
         answers: [
             {
                 text: "Kirito",
@@ -45,7 +45,7 @@ const questions = [
 
     },
     {
-        question: "What is the name from Gojo's Domain Expansion?",
+        question: "What is the name of Gojo's Domain Expansion?",
         answers: [
             {
                 text: "Unlimited Void",

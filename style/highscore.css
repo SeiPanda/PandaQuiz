@@ -189,7 +189,7 @@ body{
 i.fas.fa-paw{
     color: var(--panda-color);
     text-shadow: 1px 1px 2px #0a0a0a;
-    font-size: 32px !important;
+    font-size: 32px;
 }
 
 .fas.fa-bars{
@@ -243,7 +243,7 @@ i.fas.fa-paw{
 }
   
 .score-outer {
-    height: 5vh;
+    height: fit-content;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
@@ -269,7 +269,7 @@ i.fas.fa-paw{
     color: rgb(95, 95, 95);
     width: 90% !important;
     text-align: center;
-    border: 1px solid white;
+   
 }
 
 .score-outer > .score {
@@ -284,36 +284,26 @@ i.fas.fa-paw{
     font-family: animebld;
 }
 
-@media screen and (max-width: 362px) {
-    #logo {
-        font-size: 18px;
-    }
-    
-    i.fas.fa-paw{
-        font-size: 28px !important;
-    }
-    
-    .fas.fa-bars{
-        font-size: 28px;
-    }
-    
-    .fas.fa-times{
-        font-size: 28px;
+@media screen and (max-width: 370px) {
+
+    #inputLabel{
+        font-size: 19px !important;
+
     }
 
-    .icon{
-        font-size: 20px;
+    #currentScore{
+        font-size: 19px !important;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    #inputLabel{
+        font-size: 17px !important;
+
     }
 
-    .menu-item{
-        font-size: 16px;
+    #currentScore{
+        font-size: 17px !important;
     }
 
-    .menu-p{
-        font-size: 16px;
-    }
-
-    .fa-seedling{
-        font-size: 18px !important;
-    }
-  }
+}
