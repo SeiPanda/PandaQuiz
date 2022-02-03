@@ -54,7 +54,7 @@
 
 .menu-item{
     display: grid;
-    grid-template-columns: 0.2fr 1fr;
+    grid-template-columns: auto 1fr;
     font-size: 20px;
     color: white;
     text-shadow: 1px 1px 2px #0a0a0a;
@@ -62,7 +62,6 @@
     align-items: center;
     height: 100%;
     width: 100%;
-  
     cursor: pointer;
 }
 
@@ -87,9 +86,10 @@
 
 .icon{
     justify-self: center;
-    font-size: 24px;
+    font-size: 25px;
     text-shadow: 1px 1px 2px #0a0a0a;
     color: var(--panda-color);
+    padding-left: 1rem;
 }
 
 .fas.fa-bars{
@@ -111,7 +111,6 @@
     background: linear-gradient(126deg, #9FE5CE 0%, rgba(195,232,184,1) 50%, #d0eba4 100%);;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    
 }
 
 @media screen and (max-width: 365px) {
@@ -154,23 +153,23 @@
 
   @media screen and (max-width: 312px) {
     #logo {
-        font-size: 16px !important;
+        font-size: 17px !important;
     }
 
     .headerbar.fas.fa-cog{
-        font-size: 28px !important;
+        font-size: 27px !important;
     }
     
     i.fas.fa-paw{
-        font-size: 28px !important;
+        font-size: 27px !important;
     }
     
     .fas.fa-bars{
-        font-size: 28px !important;
+        font-size: 27px !important;
     }
     
     .fas.fa-times{
-        font-size: 28px !important;
+        font-size: 27px !important;
     }
 
     .icon{
@@ -189,3 +188,17 @@
         font-size: 18px !important;
     }
   }
+
+@media screen and (max-height: 750px) {
+    #container-app {
+        max-width: 450px !important;
+    }
+
+    #container-header-outer {
+        max-width: 450px !important;
+    }
+
+    #menu-liste{
+        max-width: 450px !important;
+    }
+}

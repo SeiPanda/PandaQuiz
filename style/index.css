@@ -79,8 +79,6 @@ i.fas.fa-paw{
     font-size: 32px ;
 }
 
-
-
 #container-body {
     height: 100%;
     display: grid;
@@ -102,8 +100,8 @@ i.fas.fa-paw{
     height: 35vh;
     border-radius: .25rem;
     text-align: center;
-    max-width: 500px;
-
+    max-width: 400px;
+    max-height: 350px;
 }
 
 img {
@@ -111,7 +109,6 @@ img {
     height: 100%;
     border-radius: 20%;
     box-shadow: 4px 4px 10px #0a0a0a;
-   
 }
 
 #container-menu{
@@ -119,7 +116,7 @@ img {
     height: 32vh;
     align-items: center;
     grid-template-rows: 1fr 1fr 1fr; 
-    gap: 20px;
+    gap: 15px;
     margin-bottom: 40px;
 }
 
@@ -146,7 +143,6 @@ img {
     background: var(--gradient);
 }
 
-
 #highscore-span{
     padding-left: 1rem;
 }
@@ -162,3 +158,21 @@ img {
     padding: 3.5px;
 }
 
+@media screen and (max-width: 365px) {
+    .menu-button {
+        font-size: 23px !important;
+    }
+}
+
+@media screen and (max-width: 312px) {
+    #app-foto{
+        max-width: 400px !important;
+        max-height: 200px !important;
+    }
+}
+
+@media screen and (min-height: 1050px) {
+    .menu-button {
+        font-size: 30px !important;
+    }
+}

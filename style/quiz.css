@@ -10,7 +10,6 @@
     font-family: mangati;
     src: url(../fonts/mangati.ttf);
 }
-
 @font-face {
     font-family: animebld;
     src: url(../fonts/animeace2_bld.ttf);
@@ -38,7 +37,6 @@ body{
     width: 95vw;
     max-width: 600px;
     height: 100%;
-   
 }
 
 #container-header{
@@ -53,7 +51,6 @@ body{
     background-color: #404040;
     margin-top: 12px;
     box-shadow: 4px 4px 10px #0a0a0a;
-
 }
 
 #logo {
@@ -154,7 +151,6 @@ i.fas.fa-paw{
     font-weight: bolder;
     align-items: center;
     text-align: center;
-   
 }
 
 .mask{
@@ -183,16 +179,12 @@ i.fas.fa-paw{
     background: #242424;
     float: right;
     border-radius: .1rem;
-  
-    
 }
-
 
 .correct {
     background-color: yellowgreen;
     color: white;
     box-shadow: 4px 4px 10px #0a0a0a;
-   
 }
 
 .false {

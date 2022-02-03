@@ -15,11 +15,9 @@
     src: url(../fonts/animeace2_bld.ttf);
 }
 
-
 body{
     height: 100vh;
     margin: 0;
-  
 }
 
 #container{
@@ -46,7 +44,6 @@ body{
 .fa-undo{
     font-size: 23px;
     padding-left: 7px;
-
 }
 
 #backButton{
@@ -61,6 +58,5 @@ body{
     transition: 150ms;
     font-size: 23px;
     font-family: animebld !important;
-
     padding: 5px;
 }

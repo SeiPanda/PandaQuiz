@@ -46,7 +46,6 @@ body{
     background-color: #404040;
     margin-top: 12px;
     box-shadow: 4px 4px 10px #0a0a0a;
-
 }
 
 #logo {
@@ -85,7 +84,6 @@ i.fas.fa-paw{
 }
 
 #container-body {
-    
     display: grid;
     grid-template-rows: auto 1fr;
     justify-items: center;
@@ -93,9 +91,9 @@ i.fas.fa-paw{
 }
 
 #categoryHeading{
-   justify-self: center;
-   font-size: 22px;
-   color: var(--panda-color);
+    justify-self: center;
+    font-size: 22px;
+    color: var(--panda-color);
     padding-top: 20px;
     font-family: animebld;
     text-align: center;
@@ -113,7 +111,6 @@ i.fas.fa-paw{
 }
 
 .menu-button{
-
     color: rgb(61, 61, 61);
     display: flex;
     justify-content: center;
@@ -126,12 +123,10 @@ i.fas.fa-paw{
     font-family: animebld !important;
     align-items: center;
     width: 100%;
-
 }
 
 #marvel{
     background-color: rgba(136, 0, 0, 0.897);
-  
     color: white;
     text-shadow: 1px 1px 2px #0a0a0a;
 }
@@ -171,7 +166,6 @@ i.fas.fa-paw{
 .menu-button:hover {
     box-shadow: 4px 4px 10px rgb(37, 37, 37);
 }
-
 
 #highscore-span{
     padding-left: 1rem;
