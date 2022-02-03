@@ -71,12 +71,12 @@ let menuOpen = false;
 function loadMenu(){
     document.querySelector("#menu-container").classList.toggle("show");
     if(menuOpen === true){   
-  
+        document.querySelector("body").style.overflow = "scroll";
         document.querySelector(".headerbar").classList.add("fa-bars");
         document.querySelector(".headerbar").classList.remove("fa-times")
         menuOpen=false;
     }else{
-        
+        document.querySelector("body").style.overflow = "hidden";
         document.querySelector(".headerbar").classList.remove("fa-bars");
         document.querySelector(".headerbar").classList.add("fa-times")
         menuOpen=true;

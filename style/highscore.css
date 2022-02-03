@@ -26,8 +26,6 @@
     --gradient: linear-gradient(126deg, rgba(159,229,197,1) 0%, rgba(195,232,184,1) 50%, rgba(208,235,164,1) 100%);
 }
 
-
-
 .closeTimes.fa-times{
     color: white;
 }
@@ -61,7 +59,6 @@
     padding: 10px;
     border-radius: 4px;
     box-shadow: 4px 4px 10px #292929;
-  
 }
 
 #popUpInner {
@@ -97,8 +94,7 @@
 #inputLabel{
     grid-row-start: 2;
     grid-column-start: 1;
-    grid-column-end: span col2-start;
-    
+    grid-column-end: span col2-start;  
 }
 
 #inputName{
@@ -114,7 +110,6 @@
     background-color: #404040;
     outline: none;
     color: white;
-    
 }
 
 #submitButton{
@@ -178,13 +173,16 @@
     height: fit-content;
     border-radius: .25rem !important;
     text-align: center;
-    /* background-color: white; */
-        box-shadow: 4px 4px 10px #0a0a0a;
+    box-shadow: 4px 4px 10px #0a0a0a;
     background: linear-gradient(126deg, rgba(159,229,197,1) 0%, rgba(195,232,184,1) 50%, rgba(208,235,164,1) 100%);
 }
 
 #highscoreTable-container > div {
     padding: 10px;
+}
+
+#eachCategoryTable:last-child{
+    margin-bottom: 40px;
 }
   
 .score-outer {
@@ -240,6 +238,14 @@
     }
 }
 
+
+@media screen and (max-width: 365px) {
+    #heading, #heading2{
+        font-size: 20px !important;
+    }
+}
+
+
 @media screen and (max-width: 340px) {
     #inputLabel{
         font-size: 17px !important;
@@ -248,5 +254,10 @@
     #currentScore{
         font-size: 17px !important;
     }
+}
 
+@media screen and (max-width: 312px) {
+    #heading, #heading2{
+        font-size: 18px !important;
+    }
 }
