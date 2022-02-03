@@ -26,11 +26,7 @@
     --gradient: linear-gradient(126deg, rgba(159,229,197,1) 0%, rgba(195,232,184,1) 50%, rgba(208,235,164,1) 100%);
 }
 
-body{
-    background: #242424;
-    margin: 0;
-    height: 100vh;
-}
+
 
 .closeTimes.fa-times{
     color: white;
@@ -149,58 +145,8 @@ body{
     font-family: animebld;
 }
 
-
-#container-header-outer{
-    width: 95vw;
-    max-width: 600px;
-    height: 100px;
-}
-
-#container-header{
-    z-index: 3;
-    position: relative;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    height: 81px;
-    width: 100%;
-    border-radius: .25rem;
-    align-self: top !important;
-    background-color: #404040;
-    margin-top: 12px;
-    margin-bottom: 12px;
-    box-shadow: 4px 4px 10px #0a0a0a;
-}
-
-#logo {
-    padding-left: 1rem;
-    font-size: 22px;
-    align-self: center;
-    color: white;
-    text-shadow: 1px 1px 2px #0a0a0a;
-    font-family: animebld;
-}
-
-#menu {
-    align-self: center;
-    justify-self: right;
-    padding-right: 1rem;
-}
-
-i.fas.fa-paw{
-    color: var(--panda-color);
-    text-shadow: 1px 1px 2px #0a0a0a;
-    font-size: 32px;
-}
-
-.fas.fa-bars{
-    color: var(--panda-color1);
-    text-shadow: 1px 1px 2px #0a0a0a;
-    font-size: 32px;
-}
-
 #container-body {
     height: 100%;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -225,7 +171,6 @@ i.fas.fa-paw{
     justify-content: center;
     margin-bottom: 20px;
 }
-
 
 #highscoreTable-container {
     max-width: 600px;

@@ -1,0 +1,80 @@
+@font-face {
+    font-family: mangatb;
+    src: url(../fonts/mangatb.ttf);
+}
+@font-face {
+    font-family: mangat;
+    src: url(../fonts/mangat.ttf);
+}
+@font-face {
+    font-family: mangati;
+    src: url(../fonts/mangati.ttf);
+}
+@font-face {
+    font-family: animebld;
+    src: url(../fonts/animeace2_bld.ttf);
+}
+@font-face {
+    font-family: animeital;
+    src: url(../fonts/animeace2_ital.ttf);
+}
+
+:root {
+    --primary-color: rgb(89, 163, 166);
+    --panda-color1: #d0eba4;
+    --panda-color: #9FE5CE;
+    --gradient: linear-gradient(126deg, rgba(159,229,197,1) 0%, rgba(195,232,184,1) 50%, rgba(208,235,164,1) 100%);
+}
+
+body{
+    background-color: #242424;
+    margin: 0;
+    height: 100vh;
+}
+
+#container-header-outer{
+    width: 95vw;
+    max-width: 600px;
+    height: 100%;
+}
+
+#container-header{
+    z-index: 3;
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    height: 81px;
+    width: 100%;
+    border-radius: .25rem;
+    align-self: top !important;
+    background-color: #404040;
+    margin-top: 12px;
+    box-shadow: 4px 4px 10px #0a0a0a;
+}
+
+#logo {
+    padding-left: 1rem;
+    font-size: 22px;
+    align-self: center;
+    color: white;
+    text-shadow: 1px 1px 2px #0a0a0a;
+    font-family: animebld;
+}
+
+#menu {
+    align-self: center;
+    justify-self: right;
+    padding-right: 1rem;
+}
+
+i.fas.fa-paw{
+    color: var(--panda-color);
+    text-shadow: 1px 1px 2px #0a0a0a;
+    font-size: 32px !important;
+}
+
+.headerbar.fas.fa-cog{
+    color: var(--panda-color1);
+    text-shadow: 1px 1px 2px #0a0a0a;
+    font-size: 32px !important;
+}
