@@ -62,12 +62,11 @@ function closePopup() {
     document.querySelector("#optionen_popup").style.display ="none";
 }
 
-var slider = document.getElementById("myRange");
-var sliderForm = document.querySelector(".slider");
-sliderForm.innerHTML = "<i class='fas fa-paw'></i>"
+/*var slider = document.getElementById("myRange");
+
 var output = document.getElementById("demo");
 output.innerHTML = slider.value;
 
 slider.oninput = function() {
   output.innerHTML = this.value;
-}
+}*/

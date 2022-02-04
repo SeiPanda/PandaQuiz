@@ -198,7 +198,7 @@ i.fas.fa-paw{
     grid-template-columns: 1fr 0.5fr 1fr;
     grid-template-rows: 1fr;
     flex-direction: column;
-    background: var(--gradient);
+    background: gray;
     padding: 10px;
     border-radius: 4px;
     box-shadow: 4px 4px 10px #292929;

@@ -25,9 +25,9 @@ function loadHighscoreListe(){
 
     let storageScores = localStorage.getItem("playerScores")
     let playerScores = [];
-    if(storageScores)
+    if(storageScores) {
         playerScores = JSON.parse(storageScores);
-
+    }
 
     //load all highscores
     let allHighscores = [];
@@ -73,12 +73,12 @@ document.querySelector("#menu").addEventListener("click", loadMenu);
 let menuOpen = false;
 function loadMenu(){
     document.querySelector("#menu-container").classList.toggle("show");
-    if(menuOpen === true){   
+    if(menuOpen === true) {   
         document.querySelector("body").style.overflow = "scroll";
         document.querySelector(".headerbar").classList.add("fa-bars");
         document.querySelector(".headerbar").classList.remove("fa-times")
         menuOpen=false;
-    }else{
+    }else {
         document.querySelector("body").style.overflow = "hidden";
         document.querySelector(".headerbar").classList.remove("fa-bars");
         document.querySelector(".headerbar").classList.add("fa-times")
@@ -96,11 +96,11 @@ document.querySelectorAll(".item-container").forEach( menuItem => {
 
 function handleClickMenuItem(e) {
     const menuItemText = e.target.innerText;
-    console.log(menuItemText)
-    if(menuItemText ==="Optionen"){
+
+    if(menuItemText ==="Optionen") {
         openOptPopup();
     }
-    if(menuItemText === "Home"){
+    if(menuItemText === "Home") {
         window.location="/index.html";
     }
 }
@@ -111,29 +111,27 @@ function closeOptPopup() {
     document.querySelector("#optionen_popup").style.display ="none";
 }
 
-var slider = document.getElementById("myRange");
-var sliderForm = document.querySelector(".slider");
-sliderForm.innerHTML = "<i class='fas fa-paw'></i>"
+/*var slider = document.getElementById("myRange");
+
 var output = document.getElementById("demo");
-    output.innerHTML = slider.value;
+output.innerHTML = slider.value;
 
 slider.oninput = function() {
   output.innerHTML = this.value;
-}
+}*/
 
 document.querySelector("#submitButton").addEventListener("click", submitName);
 
-function submitName(){
+function submitName() {
 
     let currentName = document.querySelector("#inputName").value
-    if(currentName === ""){
+    if(currentName === "") {
         alert("enter Name")
         return
     }
-    console.log(currentName)
 
     document.querySelector("#inputName").value ="";
-    document.querySelector("#PopUpName").style.visibility ="hidden";
+    document.querySelector("#PopUpName").style.display ="none";
 
     let correctEntry = highscores.find( entry => entry.category === sessionStorage.getItem("choosenCategory"));
 
@@ -143,7 +141,7 @@ function submitName(){
     }
 
     if(!correctEntry) {
-        // Wenns ned existiert dann neu anlegen
+        // dosent exist, new
         let categoryEntry = {
             category: sessionStorage.getItem("choosenCategory"),
             scores: []
@@ -151,16 +149,11 @@ function submitName(){
         categoryEntry.scores.push(entry);
         highscores.push(categoryEntry);
     } else {
-        //wenns des gibt, dann in scores hinzufügen
-        
+        // exist, add to score
         correctEntry.scores.push(entry);
     }
-    
-    //highscores.push(entry);
-    
     localStorage.setItem("playerScores", JSON.stringify(highscores));
     loadHighscoreListe();
-    // der hat die Daten geladen bevor er die neuen gesetzt bekommen hat
 }
 
 document.querySelector("#closingButton").addEventListener("click", closePopup);
