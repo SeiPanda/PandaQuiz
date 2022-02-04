@@ -255,7 +255,10 @@
 
 
 @media screen and (max-width: 365px) {
-    #heading, #heading2{
+    .heading {
+        font-size: 20px !important;
+    }
+    .heading2 {
         font-size: 20px !important;
     }
 }
@@ -266,13 +269,16 @@
         font-size: 17px !important;
     }
 
-    #currentScore{
+    #currentScore {
         font-size: 17px !important;
     }
 }
 
 @media screen and (max-width: 312px) {
-    #heading, #heading2{
+    .heading {
+        font-size: 18px !important;
+    }
+    .heading2 {
         font-size: 18px !important;
     }
 }
