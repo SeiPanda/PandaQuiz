@@ -21,7 +21,7 @@ function loadPoints () {
 
 function loadHighscoreListe(){
     
-    document.querySelector("#table-container").innerHTML = "";
+    document.querySelector("#table-container-outer").innerHTML = "";
 
     let storageScores = localStorage.getItem("playerScores")
     let playerScores = [];
@@ -31,10 +31,12 @@ function loadHighscoreListe(){
 
     //load all highscores
     let allHighscores = [];
-    let div = '<div id="eachCategoryTable"><div id="heading-container"><span iD="heading">Highscore</span><span>&nbsp;&nbsp;&nbsp;</span><span id="heading2">RANKING</span></div><div id="highscoreTable-container"><div id="table-container">';
+    let div = '<div class="eachCategoryTable"><div class="heading-container"><i class="fas fa-caret-down"></i><span class="heading">Highscore</span><span>&nbsp;&nbsp;&nbsp;</span><span class="heading2">RANKING</span></div><div class="highscoreTable-container"><div class="table-container">';
     playerScores.forEach( category => {
-        category.scores.forEach( player => {
-            allHighscores.push(player);
+        category.scores.forEach(( player, index) => {
+            if(index < 5){
+                allHighscores.push(player);
+            }
         });
     });
     allHighscores.sort( (a, b) => Number(b.score) - Number(a.score) );
@@ -43,12 +45,12 @@ function loadHighscoreListe(){
     });
 
     div += "</div></div></div>";
-    document.querySelector("#table-container").innerHTML += div;
+    document.querySelector("#table-container-outer").innerHTML += div;
     div = "";
 
 
     playerScores.forEach( category => {
-        let div = '<div id="eachCategoryTable"><div id="heading-container"><span iD="heading">' + category.category + '</span><span>&nbsp;&nbsp;&nbsp;</span><span id="heading2">RANKING</span></div><div id="highscoreTable-container"><div id="table-container">';
+        let div = '<div class="eachCategoryTable"><div class="heading-container"><i class="fas fa-caret-down"></i><span class="heading">' + category.category + '</span><span>&nbsp;&nbsp;&nbsp;</span><span class="heading2">RANKING</span></div><div class="highscoreTable-container"><div class="table-container">';
         //hier dann die scores
         category.scores.sort( (a, b) => Number(b.score) - Number(a.score) );
         category.scores.forEach( (player, index) => {
@@ -56,7 +58,7 @@ function loadHighscoreListe(){
             div += "<div class='score-outer'><div class='countBox'><span class='count'>"  + (index+1) + "</span></div><span class='name'>" + player.name + "</span><span class='score'>" + player.score + "</span></div>";
         });
         div += "</div></div></div>";
-        document.querySelector("#table-container").innerHTML += div;
+        document.querySelector("#table-container-outer").innerHTML += div;
     });
 }
 
@@ -149,18 +151,44 @@ function closePopup() {
 
 
 
-document.querySelectorAll("#eachCategoryTable").forEach( cateTable => {
+document.querySelectorAll(".eachCategoryTable").forEach( cateTable => {
     cateTable.addEventListener("click", handleClickTable);
 });
 
-function handleClickTable() {
-    console.log(open)
-    if(open === false) {
-        document.querySelector(".score-outer").classList.add("currentClosed");
-        open = true;
-    }else{
-        document.querySelector(".score-outer").classList.remove("currentClosed");
-        open = false;
+function handleClickTable( event ) {
+    let target = event.target;
+
+    if(target.nodeName === "SPAN" && !target.classList.contains("heading") && !target.classList.contains("heading2") ) {
+        target = target.parentNode.parentNode;
     }
+
+    if(target.classList.contains("heading") || target.classList.contains("heading2") ) {
+        target = target.parentNode.parentNode.children[1].children[0];
+    }
+
+    if(target.classList.contains("fa-caret-down") ) {
+        target = target.parentNode.parentNode.children[1].children[0];
+        console.log(target)
+    }
+
+    if(target.classList.contains("score-outer")){
+        target = target.parentNode;
+    }
+
+    if(target.classList.contains("countBox")){
+        target = target.parentNode.parentNode;
+    }
+
+    if(target.classList.contains("table-container")){
+        target = target;
+    }
+
+    if(target.classList.contains("eachCategoryTable") || target.classList.contains("heading-container")){
+        return;
+    }
+
+    target.childNodes.forEach( child => child.classList.toggle("currentClosed"));
+    target.parentNode.parentNode.childNodes[0].childNodes[0].classList.toggle("closed")
+
 }
 

@@ -148,26 +148,37 @@
     row-gap: 20px;
 }
 
-#heading {
+.heading {
     font-size: 22px;
     font-family: animebld;
     color: var(--panda-color);
 }
 
-#heading2 {
+.heading2 {
     font-size: 22px;
     font-family: animebld;
     color: var(--panda-color1);
 }
 
-#heading-container{
+.fas.fa-caret-down {
+    font-size: 28px;
+    color: var(--panda-color);
+    margin-right: 12px;
+    align-self: center;
+}
+
+.fas.fa-caret-down.closed {
+    transform: rotate(-90deg);
+}
+
+.heading-container{
     margin-top: 20px !important;
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
 }
 
-#highscoreTable-container {
+.highscoreTable-container {
     max-width: 600px;
     width: 95vw;
     height: fit-content;
@@ -177,11 +188,11 @@
     background: linear-gradient(126deg, rgba(159,229,197,1) 0%, rgba(195,232,184,1) 50%, rgba(208,235,164,1) 100%);
 }
 
-#highscoreTable-container > div {
+.highscoreTable-container > div {
     padding: 10px;
 }
 
-#eachCategoryTable{
+.eachCategoryTable{
     margin-bottom: 40px;
 }
 
