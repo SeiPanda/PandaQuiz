@@ -56,7 +56,7 @@ function handleClickMenuItem(e) {
     }
 }
 
-document.querySelector("#closingButton").addEventListener("click", closePopup);
+document.querySelector("#option_closingButton").addEventListener("click", closePopup);
 
 function closePopup() {
     document.querySelector("#optionen_popup").style.display ="none";

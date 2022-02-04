@@ -7,7 +7,6 @@ body{
 #container-header-outer{
     width: 95vw;
     max-width: 600px;
- 
 }
 
 #container-header{
@@ -169,6 +168,216 @@ i.fas.fa-paw{
     -webkit-text-fill-color: transparent;
 }
 
+
+.closeTimes.fa-times {
+    color: white;
+}
+
+#optionen_popup{
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.795);
+    display: none;
+}
+
+#optionen_inner {
+    max-width: 400px;
+    height: fit-content;
+    width: 90vw;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 1fr;
+    grid-template-rows: 1fr;
+    flex-direction: column;
+    background: var(--gradient);
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 4px 4px 10px #292929;
+}
+
+#optionen_popUpInner {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr;
+    background-color: #404040;
+    color: white;
+    border-radius: 4px;
+    padding: 10px;
+    font-family: animeital;
+    font-size: 21px;
+    box-shadow: 4px 4px 10px #292929;
+    height: 14vh;
+    align-items: center;
+    padding-left: 60px;
+    padding-right: 20px;
+}
+
+#option_submitButton {
+    margin-top: 20px;
+    grid-row-start: 3;
+    grid-column-start: 3;
+    background-color: #404040;
+    box-shadow: 4px 4px 10px #292929;
+    color: white;
+    text-shadow: 1px 1px 2px #0a0a0a;
+    border:none;
+    border-radius: 4px;
+    font-size: 21px;
+    font-family: animebld;
+}
+
+#option_closingButton {
+    margin-bottom: 10px;
+    grid-row-start: 1;
+    grid-column-start: 3;
+    text-align: right;
+    border:none;
+    background: transparent !important;
+    font-size: 21px;
+    font-family: animebld;
+}
+
+#option_resetButton {
+    margin-top: 20px;
+    grid-row-start: 3;
+    grid-column-start: 1;
+    background-color: #404040;
+    box-shadow: 4px 4px 10px #292929;
+    color: white;
+    text-shadow: 1px 1px 2px #0a0a0a;
+    border:none;
+    border-radius: 4px;
+    font-size: 21px;
+    font-family: animebld;
+}
+
+.sound {
+    padding: 2px;
+    grid-row-start: 2;
+    grid-column-start: 1;
+    font-size: 30px;
+}
+
+.lightmode {
+    padding: 2px;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    font-size: 30px;
+}
+
+.switch {
+    padding: 2px;
+    align-self: center;
+    grid-row-start: 1;
+    grid-column-start: 2;
+    position: relative;
+    display: inline-block;
+    width: 60px;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch_slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.switch_slider:before {
+    position: absolute;
+    content: "";
+    height: 23px;
+    width: 23px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .switch_slider {
+    background: var(--gradient);
+}
+
+input:focus + .switch_slider {
+    box-shadow: 1px 1px 2px #0a0a0a;
+}
+
+input:checked + .switch_slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.switch_slider.round {
+    border-radius: 34px;
+}
+
+.switch_slider.round:before {
+    border-radius: 50%;
+}
+
+.slidecontainer {
+    width: 100%;
+}
+  
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background: var(--gradient);
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+  
+.slider:hover {
+    opacity: 1;
+}
+  
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 23px;
+    height: 24px;
+    border: 0;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+  
+.slider::-moz-range-thumb {
+    width: 23px;
+    height: 24px;
+    border: 0;
+    cursor: pointer;
+}
+
 @media screen and (min-width: 700px) {
     #menu-container.show{
         top: 0px !important;
@@ -263,8 +472,6 @@ i.fas.fa-paw{
     }
 }
 
-
-
 @media screen and (max-height: 480px) { 
     #container-header { /*für alle seiten */
         height: 61px !important;
@@ -272,5 +479,11 @@ i.fas.fa-paw{
 
     #h:first-child {
         margin-top: 90px;
+    }
+}
+
+@media screen and (max-height: 590px) { 
+    #optionen_popUpInner {
+        height: 16vh !important;
     }
 }

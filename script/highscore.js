@@ -86,6 +86,10 @@ function loadMenu(){
     }
 }
 
+function openOptPopup() {
+    document.querySelector("#optionen_popup").style.display ="flex";
+}
+
 document.querySelectorAll(".item-container").forEach( menuItem => {
     menuItem.addEventListener("click", handleClickMenuItem);
 });
@@ -94,11 +98,27 @@ function handleClickMenuItem(e) {
     const menuItemText = e.target.innerText;
     console.log(menuItemText)
     if(menuItemText ==="Optionen"){
-        alert("Optionen")
+        openOptPopup();
     }
     if(menuItemText === "Home"){
         window.location="/index.html";
     }
+}
+
+document.querySelector("#option_closingButton").addEventListener("click", closeOptPopup);
+
+function closeOptPopup() {
+    document.querySelector("#optionen_popup").style.display ="none";
+}
+
+var slider = document.getElementById("myRange");
+var sliderForm = document.querySelector(".slider");
+sliderForm.innerHTML = "<i class='fas fa-paw'></i>"
+var output = document.getElementById("demo");
+    output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
 }
 
 document.querySelector("#submitButton").addEventListener("click", submitName);
@@ -146,10 +166,8 @@ function submitName(){
 document.querySelector("#closingButton").addEventListener("click", closePopup);
 
 function closePopup() {
-    document.querySelector("#PopUpName").style.visibility ="hidden";
+    document.querySelector("#PopUpName").style.display ="none";
 }
-
-
 
 document.querySelectorAll(".eachCategoryTable").forEach( cateTable => {
     cateTable.addEventListener("click", handleClickTable);

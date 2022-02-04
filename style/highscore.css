@@ -26,10 +26,6 @@
     --gradient: linear-gradient(126deg, rgba(159,229,197,1) 0%, rgba(195,232,184,1) 50%, rgba(208,235,164,1) 100%);
 }
 
-.closeTimes.fa-times{
-    color: white;
-}
-
 #PopUpName{
     position: fixed;
     z-index: 999;
@@ -242,6 +238,19 @@
     font-family: animebld;
 }
 
+@media screen and (max-width: 390px) {
+    .heading {
+        font-size: 20px !important;
+    }
+    .heading2 {
+        font-size: 20px !important;
+    }
+
+    .fas .fa-caret-down {
+        font-size: 22px !important;
+    }
+}
+
 @media screen and (max-width: 370px) {
 
     #inputLabel{
@@ -256,10 +265,14 @@
 
 @media screen and (max-width: 365px) {
     .heading {
-        font-size: 20px !important;
+        font-size: 18px !important;
     }
     .heading2 {
-        font-size: 20px !important;
+        font-size: 18px !important;
+    }
+
+    .fas .fa-caret-down {
+        font-size: 21px !important;
     }
 }
 
@@ -276,9 +289,13 @@
 
 @media screen and (max-width: 312px) {
     .heading {
-        font-size: 18px !important;
+        font-size: 16px !important;
     }
     .heading2 {
-        font-size: 18px !important;
+        font-size: 16px !important;
+    }
+
+    .fas .fa-caret-down {
+        font-size: 20px !important;
     }
 }
