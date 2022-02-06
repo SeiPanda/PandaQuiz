@@ -1,3 +1,13 @@
+
+body.light_mode_css {
+    background-color: rgb(172, 171, 171) !important;
+}
+
+.light_mode_css {
+    background-color: whitesmoke !important;
+}
+
+
 body{
     background-color: #242424;
     margin: 0;
@@ -285,6 +295,7 @@ i.fas.fa-paw{
     position: relative;
     display: inline-block;
     width: 60px;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .switch input { 

@@ -26,7 +26,13 @@
     --gradient: linear-gradient(126deg, rgba(159,229,197,1) 0%, rgba(195,232,184,1) 50%, rgba(208,235,164,1) 100%);
 }
 
+.menu-button.light_mode_css {
+    background-color: #ffffff !important
+}
 
+#innerStart.light_mode_css {
+    background-color: #ffffff !important;
+}
 
 #container-body {
     height: 100%;

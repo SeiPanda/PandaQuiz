@@ -70,3 +70,24 @@ output.innerHTML = slider.value;
 slider.oninput = function() {
   output.innerHTML = this.value;
 }*/
+
+document.querySelector("#checkbox_switch").addEventListener("click", handleToggleSwitch);
+
+function handleToggleSwitch() {
+   let toggle_value = document.querySelector("#checkbox_switch").checked;
+
+   if(toggle_value === true){
+        console.log("Light Mode On")
+        document.querySelector("body").classList.add("light_mode_css")
+        document.querySelector("#innerStart").classList.add("light_mode_css")
+        document.querySelectorAll(".menu-button").forEach(butt => {butt.classList.add("light_mode_css")})
+        document.querySelector("#container-header").classList.add("light_mode_css")
+   }else{
+        console.log("Light Mode Off")
+        document.querySelector("body").classList.remove("light_mode_css")
+        document.querySelector("#innerStart").classList.remove("light_mode_css")
+        document.querySelectorAll(".menu-button").forEach(butt => {butt.classList.remove("light_mode_css")})
+        document.querySelector("#container-header").classList.remove("light_mode_css")
+   }
+   
+}
